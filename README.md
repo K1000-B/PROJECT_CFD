@@ -8,6 +8,7 @@ No external `.dat` coordinate file is required. Geometry, domain and mesh sizes 
 
 ```text
 PROJECT_CFD/
+├── launch_project_cfd.m              Graphical MATLAB launcher
 ├── generate_naca_mesh.m              MATLAB entry point
 ├── configs/
 │   └── naca0012_example.m            Baseline configuration
@@ -35,6 +36,14 @@ Use one consistent physical length unit throughout a configuration. The example 
 ## Quick start
 
 Clone the repository, open MATLAB, and change to the repository root:
+
+```matlab
+launch_project_cfd
+```
+
+The launcher exposes the airfoil code, chord, point count, circular domain, mesh-size parameters, output directory and Gmsh executable. Its domain and refinement fields are **multiples of the chord** (`[c]`), so changing the chord scales those distances automatically. **Generate .geo** writes the geometry instructions without running Gmsh. **Generate SU2 mesh** also invokes Gmsh and reports the completed mesh path. The checkbox controls the geometry plots. The default output directory is `meshes/generated/`; generated filenames include the NACA code. Input errors appear in the launcher window.
+
+For use without the graphical interface:
 
 ```matlab
 addpath('configs');
