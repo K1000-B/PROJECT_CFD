@@ -1,35 +1,8 @@
-# Operating system and editors
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
-.vscode/
-.idea/
+# Generated geometry and meshes
+/output/*
+!/output/.gitkeep
 
-# MATLAB generated files
+# MATLAB and operating-system temporary files
 *.asv
-*.autosave
 *.m~
-*.fig
-*.mex*
-slprj/
-codegen/
-
-# Generated meshes and Gmsh intermediates
-/meshes/generated/
-*.msh
-*.su2
-*.geo_unrolled
-
-# SU2 and other CFD run products
-/simulations/runs/
-/simulations/results/
-*.restart
-*.cgns
-*.vtk
-*.vtu
-
-# Temporary files
-*.tmp
-*.log
+.DS_Store
